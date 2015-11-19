@@ -1,0 +1,8 @@
+<% @s3image.each do |p| %>
+<%=image_tag p.my_image %>
+<% end %>
+
+<%=form_tag '/loader/upload', multipart: true do %>
+    <input type="file" name="image_file">
+    <input type="submit" value="저장">
+<% end %>
