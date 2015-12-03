@@ -20,6 +20,24 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+  
+   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+
+ <div class="field">
+    성별<br />
+    <select name="user[is_female]">
+      <option value="true">남</option>
+      <option value="false">여</option>
+    </select>
+  </div>
+  
+   <div class="field">
+    생년월일<br />
+    <%= date_field(:user, :date_of_birth) %>
+  </div>
 
   <div class="actions">
     <%= f.submit "Sign up" %>

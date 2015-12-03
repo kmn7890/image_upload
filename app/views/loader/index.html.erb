@@ -2,17 +2,22 @@
 <%=image_tag p.my_image %>
 <% end %>
 
+<h1>사진 업로드</h1>
+
 <%=form_tag '/loader/upload', multipart: true do %>
     <input type="file" name="image_file">
     <input type="submit" value="저장">
 <% end %>
+
+<h1>문자 전송</h1>
 
 <%=form_tag '/loader/send_msg' do %>
 제목 <input type="string" name="subject"><br>
 받는 사람 이름 <input type="text" name="dest_name"><br>
 받는 사람 전화번호 <input type="text" name="dest_phone"><br>
 비즈라이스 메시지 내용 <input type="text" name="message"><br>
-
-
 <input type="submit">
+
+
+
 <% end %>

@@ -12,7 +12,7 @@ class LoaderController < ApplicationController
     
     def send_msg
        require 'unirest'
-       msg = "#{params[:message]} --님의 전화번호는 #{}입니다"
+       msg = "안녕하세요 #{params[:message]}수업 자료 좀 받을 수 있을까요? 밥한끼 살게요! 저는 다음주 #{params[:message]} 시간 돼요 ^^ 언제 시간 괜찮으세요?"
 
         response = Unirest.post "http://sms.cycorld.com",
           parameters:{

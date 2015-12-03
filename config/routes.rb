@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  devise_for :users
   get '/'=>'loader#index'
   post 'loader/upload'
   post 'loader/send_msg'
